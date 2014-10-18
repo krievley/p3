@@ -13,5 +13,14 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	//return View::make('hello');
+	
+	/**$generator = new LoremIpsum();
+	$paragraphs = $generator->getParagraphs(5);
+	echo implode('<p>', $paragraphs);*/
+
+	/**$faker = Faker::create();
+	echo $faker->name . '<br>';
+	echo $faker->address . '<br>';
+	echo $faker->text . '<br>';*/
 });
