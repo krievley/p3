@@ -1,0 +1,82 @@
+﻿body {
+    width: 100%;
+}
+p {
+    font-size: 24px;
+}
+h1 {
+    text-align: left;
+    padding-top: 130px;
+    font-family: 'Baskerville Old Face';
+    color: black;
+    font-size: 65px;
+    text-shadow: 5px 5px 5px white;
+}
+h2 {
+    font-family: 'Baskerville Old Face';
+    font-size: 36px;
+}
+#header {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+#main {
+    padding-top: 50px;
+}
+#secondary {
+    padding-top: 50px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #e1e2e3;
+}
+#final {
+    padding-top: 50px;
+}
+#bar {
+    background-color: #e1e2e3;
+    height: 150px;
+    margin-top: -180px;
+}
+#toolbox {
+    height: 350px;
+    width: auto;
+}
+#wrench, #robot {
+    height: 270px;
+}
+#cloud {
+    height: 230px;
+}
+.container {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col1 {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+    height: 355px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.col2 {
+    display: inline-block;
+    vertical-align: top;
+    width: 63%;
+    height: 355px;
+    padding: 15px;
+}
+.col3 {
+    display: inline-block;
+    width: 49%;
+    height: 355px;
+    vertical-align: top;
+}
+
