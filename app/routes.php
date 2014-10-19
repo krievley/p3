@@ -15,12 +15,35 @@ Route::get('/', function()
 {
 	return View::make('index');
 	
-	/**$generator = new LoremIpsum();
-	$paragraphs = $generator->getParagraphs(5);
-	echo implode('<p>', $paragraphs);*/
+	
 
 	/**$faker = Faker::create();
 	echo $faker->name . '<br>';
 	echo $faker->address . '<br>';
 	echo $faker->text . '<br>';*/
+});
+
+Route::get('/loremipsum', function()
+{
+	return View::make('loremipsum');
+});
+
+Route::post('/loremipsum', function()
+{
+	/**$postData = Input::all();
+	$generator = new LoremIpsum();
+	$paragraphs = $generator->getParagraphs($postData["paraNum"]);
+	$paragraphData = implode('<p>', $paragraphs);
+
+	var_dump($paragraphData);*/
+});
+
+Route::get('/user', function()
+{
+	return View::make('user');
+});
+
+Route::get('/password', function()
+{
+	return View::make('password');
 });

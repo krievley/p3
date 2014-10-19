@@ -1,16 +1,25 @@
 ﻿@extends('master')
 
 @section('picture')
-    <img id="toolbox" src="{{ asset('images/itToolbox.png')}}" alt="IT Toolbox" />
+    <div class="col3">
+        <img id="toolbox" src="{{ asset('images/itToolbox.png')}}" alt="IT Toolbox" />
+    </div>
 @stop
 
 @section('h1')
-    <h1>Developer Tools</h1>
+    <div class="col3">
+        <h1>Developer Tools</h1>
+        <h4><a href="/" target="_blank">Home</a> | <a href="/loremipsum" target="_blank">Lorem Ipsum</a> | <a href="/user" target="_blank">Random User</a> | <a href="password" target="_blank">XKCD Password</a></h4>
+    </div>
+@stop
+
+@section('bar')
+    <div class="bar"></div>
 @stop
 
 @section('content')
     <div id="main">
-        <div class="container">
+        <a href="/loremipsum" target="_blank"><div class="container">
             <div class="col2">
                 <h2>Lorem Ipsum Generator</h2>
                 <p>
@@ -22,10 +31,10 @@
             <div class="col1">
                 <img id="robot" src="{{ asset('images/robot.jpg') }}" alt="Robot" />
             </div>
-        </div>
+        </div></a>
     </div>
     <div id="secondary">
-        <div class="container">
+        <a href="/user" target="_blank"><div class="container">
             <div class="col1">
                 <img id="cloud" src="{{ asset('images/cloud.png') }}" alt="Cloud" />
             </div>
@@ -36,10 +45,10 @@
                     who need dummy user information to test their applications.
                 </p>
             </div>
-        </div>
+        </div></a>
     </div>
     <div id="final">
-        <div class="container">
+        <a href="password" target="_blank"><div class="container">
             <div class="col2">
                 <h2>XKCD Password Generator</h2>
                 <p>
@@ -49,8 +58,8 @@
                 </p>
             </div>
             <div class="col1">
-                <img id="wrench" src="{{ asset('images/wrench.jpg') }}" alt="Wrench" />
+                <img id="wrench" src="{{ asset('images/wrench.png') }}" alt="Wrench" />
             </div>
-        </div>
+        </div></a>
     </div>
 @stop

@@ -6,19 +6,15 @@
     <title>@yield('title', 'p3: CSCI E-25')</title>
     <link rel='stylesheet' href='{{ asset('css/normalize.css') }}'/>
     <link rel='stylesheet' href='{{ asset('css/default.css') }}'/>
+    @yield('links')
 </head>
 <body>
     <div id="header">
         <div class="container">
-            <div class="col3">
-                @yield('picture')
-            </div>
-            <div class="col3">
-                @yield('h1')
-                <h4>Home | Lorem Ipsum | Random User | XKCD Password</h4>
-            </div>
+            @yield('picture')
+            @yield('h1')
         </div>
-        <div id="bar"></div>
+        @yield('bar')
     </div>
     @yield('content')
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'></script>
