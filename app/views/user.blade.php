@@ -27,13 +27,19 @@
                     <p>
                         Include...<br />
                         <input class="checkbox" type="checkbox" name="birthday" /><label for="birthday">Birthday</label><br />
-                        <input class="checkbox" type="checkbox" name="pr0file" /><label for="profile">Profile</label>
+                        <input class="checkbox" type="checkbox" name="profile" /><label for="profile">Profile</label>
                     </p>
                     <button type="submit" class="button" name="RUsubmit">Generate</button>
                 </form>
             </div>
             <div class="col4">
-                
+				@foreach ($userData as $users)
+					<p>
+					@foreach ($users as $items)
+						{{ $items }}<br>
+					@endforeach
+					</p>
+				@endforeach
             </div>
         </div>
     </div>

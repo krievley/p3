@@ -12,3 +12,5 @@ do an in-person demo.
 
 ## Outside Code
 normalize.css: http://necolas.github.io/normalize.css/
+https://packagist.org/packages/fzaninotto/faker
+https://packagist.org/packages/badcow/lorem-ipsum

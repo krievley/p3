@@ -27,8 +27,8 @@
                     <button type="submit" class="button" name="LIsubmit">Generate</button>
                 </form>
             </div>
-            <div class="col4">
-                
+			<div class="col4">
+               <p>{{ $paragraphData }}</p>
             </div>
         </div>
     </div>

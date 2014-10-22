@@ -1,4 +1,4 @@
-﻿@extends('master')
+@extends('master')
 
 @section('picture')
     <div class="col1">
@@ -25,10 +25,11 @@
 @section('content')
     <div id="main">
         <div class="container">
+				<h6>{{ $result }}</h6>
                 <form action="/password" method="post">
                     <h2>Password Specifications</h2>
                 <div class="col4 bordered">
-                    <div class="para">Number of words: <input class="paragraph" name="words" type="number" min="1" max="9" required="required" /> (Max 9)</div>
+                    <div class="para">Number of words: <input class="paragraph" name="words" type="number" min="1" max="9" required="required" value="4" /> (Max 9)</div>
                     <div class="para"><input class="checkbox" name="num" type="checkbox" /> Add a Number</div>
                     <div class="para"><input class="checkbox" name="symbol" id="sym" type="checkbox" /> Add a Symbol</div>
                     <div class="para" id="symNum">Number of symbols: <input class="paragraph" name="symNum" type="number" min="1" max="3" /> (Max 3)</div>
@@ -63,9 +64,6 @@
                 </div>
                 <div class="col1">
                     <button type="submit" class="button" name="XKCDsubmit">Generate</button>
-                </div>
-                <div id="pass" class="container">
-                    <h2> </h2>
                 </div>
                 </form>
             </div>
