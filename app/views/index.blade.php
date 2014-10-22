@@ -1,4 +1,4 @@
-﻿@extends('master')
+@extends('master')
 
 @section('picture')
     <div class="col3">
@@ -6,11 +6,12 @@
     </div>
 @stop
 
+@section('col')
+    <div class="col3 title">
+@stop
+
 @section('h1')
-    <div class="col3">
-        <h1>Developer Tools</h1>
-        <h4><a href="/" target="_blank">Home</a> | <a href="/loremipsum" target="_blank">Lorem Ipsum</a> | <a href="/user" target="_blank">Random User</a> | <a href="password" target="_blank">XKCD Password</a></h4>
-    </div>
+    <h1>Developer Tools</h1>
 @stop
 
 @section('bar')

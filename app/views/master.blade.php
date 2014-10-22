@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -12,7 +12,10 @@
     <div id="header">
         <div class="container">
             @yield('picture')
-            @yield('h1')
+            @yield('col')
+                @yield('h1')
+                <h4><a href="/" target="_blank">Home</a> | <a href="/loremipsum" target="_blank">Lorem Ipsum</a> | <a href="/user" target="_blank">Random User</a> | <a href="password" target="_blank">XKCD Password</a></h4>
+            </div>
         </div>
         @yield('bar')
     </div>

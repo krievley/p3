@@ -1,4 +1,4 @@
-﻿@extends('master')
+@extends('master')
 
 @section('picture')
     <div class="col1">
@@ -6,11 +6,12 @@
     </div>
 @stop
 
-@section('h1')
+@section('col')
     <div class="col2">
-        <h3>Random User Generator</h3>
-        <h4><a href="/" target="_blank">Home</a> | <a href="/loremipsum" target="_blank">Lorem Ipsum</a> | <a href="/user" target="_blank">Random User</a> | <a href="password" target="_blank">XKCD Password</a></h4>
-    </div>
+@stop
+
+@section('h1')
+    <h3>Random User Generator</h3>
 @stop
 
 @section('bar')
