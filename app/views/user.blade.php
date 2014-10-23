@@ -26,7 +26,7 @@
                 {{ Form::open(array('url' => '/user', 'method' => 'POST'));}}
                     {{-- Users to generate field. ------------------------}}
                     {{ Form::label('userNum', 'Users:'); }}
-                    {{ Form::number('number', '4'); }}
+                    {{ Form::text('number', '4'); }}
                     {{ Form::label('userNum', '(Max: 99)'); }}
                     <div class="errors">
                         @foreach($errors->all() as $message)

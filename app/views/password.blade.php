@@ -32,7 +32,7 @@
                 <div class="col4 bordered">
                     {{-- Words to generate field. ----------------------------}}
                     {{ Form::label('words', 'Number of words:'); }}
-                    {{ Form::number('words', '4'); }}
+                    {{ Form::text('words', '4'); }}
                     {{ Form::label('words', '(Max: 9)'); }}
                     <br>
                     {{-- Add a number checkbox. ------------------------------}}
@@ -46,7 +46,7 @@
                     <div id="symNum">
                         {{-- Number of symbols to add field ------------------}}
                         {{ Form::label('symbolNum', 'Number of symbols:'); }}
-                        {{ Form::number('symbols', '1'); }}
+                        {{ Form::text('symbols', '1'); }}
                         {{ Form::label('symbolNum', '(Max: 3)'); }}
                         <br />
                     </div>

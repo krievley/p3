@@ -84,6 +84,9 @@ h6 {
 #symNum {
     display: none;
 }
+.errors {
+    color: red;
+}
 .title {
     padding-top: 130px;
 }
@@ -102,7 +105,7 @@ h6 {
     padding-left: 25px;
     padding-right: 25px;
 }
-input[type="number"] {
+input[type="text"] {
     width: 35px;
 }
 input[type="submit"] {

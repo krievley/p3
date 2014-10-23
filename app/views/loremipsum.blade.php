@@ -26,7 +26,7 @@
                 {{ Form::open(array('url' => '/loremipsum', 'method' => 'POST')); }}
                     {{-- Paragraphs of lorem ipsum to generate field. ----}}
                     {{ Form::label('paragraph', 'Paragraphs:'); }}
-                    {{ Form::number('number', '4'); }}
+                    {{ Form::text('number', '4'); }}
                     {{ Form::label('paragraph', '(Max: 99)'); }}
                     <div class="errors">
                         @foreach($errors->all() as $message)

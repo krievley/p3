@@ -27,13 +27,12 @@ Route::get('/loremipsum{paragraphData?}', function($paragraphData = '' )
 Route::post('/loremipsum', function()
 {
         //Array to hold validation rules.
-        $rules = array('number' => 'numeric|integer|max:99|min:1');
+        $rules = array('number' => 'numeric|max:99|min:1');
         //Array of error messages
         $messages = array(
         'min' => 'Please enter a number greater than 0.',
         'max' => 'Please enter a number less than 100.',
-        'numeric' => 'Please enter a number between 1 and 99.',
-        'integer' => 'Please enter a whole number between 1 and 99.',    
+        'numeric' => 'Please enter a number between 1 and 99.',   
         );
         
         // Create a new validator instance.
@@ -66,12 +65,11 @@ Route::get('/user{userData?}', function($userData = array())
 Route::post('/user', function ()
 {
         //Array to hold validation rules.
-        $rules = array('number' => 'numeric|integer|max:99|min:1');
+        $rules = array('number' => 'numeric|max:99|min:1');
         $messages = array(
         'min' => 'Please enter a number greater than 0.',
         'max' => 'Please enter a number less than 100.',
-        'numeric' => 'Please enter a number between 1 and 99.',
-        'integer' => 'Please enter a whole number between 1 and 99.',    
+        'numeric' => 'Please enter a number between 1 and 99.',  
         );
         
         // Create a new validator instance.
@@ -119,16 +117,15 @@ Route::get('/password{result?}', function($result = '')
 Route::post('/password', function()
 {
         //Array to hold validation rules.
-        $rules = array('words' => 'numeric|integer|max:9|min:1',
-                        'symbols' => 'numeric|integer|max:3|min:1');
+        $rules = array('words' => 'numeric|max:9|min:1',
+                        'symbols' => 'numeric|max:3|min:1');
         $messages = array(
         'min' => 'Please enter a number greater than 0.',
         'words.max' => 'Please enter a number less than 10.',
         'words.numeric' => 'Please enter a number between 1 and 9.',
         'words.integer' => 'Please enter a whole number between 1 and 9.',
         'symbols.max' => 'Please enter a number less than 4.',
-        'symbols.numeric' => 'Please enter a number between 1 and 3.',
-        'symbols.integer' => 'Please enter a whole number between 1 and 3.',    
+        'symbols.numeric' => 'Please enter a number between 1 and 3.',  
         );
         
         // Create a new validator instance.
