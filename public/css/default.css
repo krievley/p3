@@ -1,7 +1,7 @@
 ﻿body {
     width: 100%;
 }
-p, .para {
+p, .para, label {
     font-size: 20px;
 }
 a {
@@ -81,6 +81,9 @@ h6 {
     margin-top: 10px;
     text-align: center;
 }
+#symNum {
+    display: none;
+}
 .title {
     padding-top: 130px;
 }
@@ -99,10 +102,10 @@ h6 {
     padding-left: 25px;
     padding-right: 25px;
 }
-.paragraph {
+input[type="number"] {
     width: 35px;
 }
-.button {
+input[type="submit"] {
     margin-top: 50px;
     padding: 12px;
     width: 200px;
@@ -117,12 +120,12 @@ h6 {
     border-style: none;
     border-radius: 5px;
 }
-.checkbox {
+input[type="checkbox"] {
     width: 25px;
     height: 25px;
     margin: 10px;
 }
-.radio {
+input[type="radio"] {
     width: 20px;
     height: 20px;
 }
@@ -188,7 +191,7 @@ h6 {
     h2 {
         font-size: 24px;
     }
-    p, .para {
+    p, .para, label {
     font-size: 16px;
 }
     .bar {
@@ -198,7 +201,7 @@ h6 {
         width: 100%;
         height: auto;
     }
-    .button {
+    input[type="submit"] {
     margin-top: 50px;
     padding: 7px;
     width: 150px;

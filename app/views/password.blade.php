@@ -27,46 +27,69 @@
     <div id="main">
         <div class="container">
 				<h6>{{ $result }}</h6>
-                <form action="/password" method="post">
+                {{ Form::open(array('url' => '/password', 'method' => 'POST')); }}                
                     <h2>Password Specifications</h2>
                 <div class="col4 bordered">
-                    <div class="para">Number of words: <input class="paragraph" name="words" type="number" min="1" max="9" required="required" value="4" /> (Max 9)</div>
-                    <div class="para"><input class="checkbox" name="num" type="checkbox" /> Add a Number</div>
-                    <div class="para"><input class="checkbox" name="symbol" id="sym" type="checkbox" /> Add a Symbol</div>
-                    <div class="para" id="symNum">Number of symbols: <input class="paragraph" name="symNum" type="number" min="1" max="3" /> (Max 3)</div>
-                    <br />
-                </div>
+                    {{-- Words to generate field. ----------------------------}}
+                    {{ Form::label('words', 'Number of words:'); }}
+                    {{ Form::number('words', '4'); }}
+                    {{ Form::label('words', '(Max: 9)'); }}
+                    <br>
+                    {{-- Add a number checkbox. ------------------------------}}
+                    {{ Form::checkbox('num'); }}
+                    {{ Form::label('num', 'Add a Number'); }}
+                    <br>
+                    {{-- Add a symbol checkbox. ------------------------------}}
+                    {{ Form::checkbox('symbol'); }}
+                    {{ Form::label('symbol', 'Add a Symbol'); }}
+                    <br>
+                    <div id="symNum">
+                        {{-- Number of symbols to add field ------------------}}
+                        {{ Form::label('symbolNum', 'Number of symbols:'); }}
+                        {{ Form::number('symbols', '1'); }}
+                        {{ Form::label('symbolNum', '(Max: 3)'); }}
+                        <br />
+                    </div>
+                    <div class="errors">
+                        @foreach($errors->all() as $message)
+                            {{ $message }}
+                        @endforeach
+                    </div>
+                </div>    
                 <h2>Display Options</h2>
                 <div class="col6 bordered">
                     <h5>Separate Words By:</h5>
                     <div class="input para">
-                        <input class="radio" type="radio" id="spaces" name="separation" value="spaces" checked="checked" />
-                        <label for="spaces">Spaces</label>
+                        {{-- Letter separation choices. ----------------------}}
+                        {{ Form::radio('separation', 'spaces', true); }}
+                        {{ Form::label('spaces', 'Spaces'); }}
                         <br />
-                        <input class="radio" type="radio" id="camelCase" name="separation" value="camelCase" />
-                        <label for="camelCase">Camel Case</label>
+                        {{ Form::radio('separation', 'camelCase'); }}
+                        {{ Form::label('camelCase', 'Camel Case'); }}
                         <br />
-                        <input class="radio" type="radio" id="hyphens" name="separation" value="hyphens" />
-                        <label for="hyphens">Hyphens</label>
+                        {{ Form::radio('separation', 'hyphens'); }}
+                        {{ Form::label('hyphens', 'Hyphens'); }}
                     </div>
                 </div>
                 <div class="col6 bordered">
                     <h5>Letters Should Appear:</h5>
                     <div class="input para">
-                        <input class="radio" type="radio" id="lower" name="letter" value="lower" checked="checked" />
-                        <label for="lower">Lower Case</label>
+                        {{-- Letter capitalization choices. ------------------}}
+                        {{ Form::radio('letter', 'lower', true); }}
+                        {{ Form::label('lower', 'Lower Case'); }}
                         <br />
-                        <input class="radio" type="radio" id="upper" name="letter" value="upper" />
-                        <label for="upper">Upper Case</label>
+                        {{ Form::radio('letter', 'upper'); }}
+                        {{ Form::label('lower', 'Upper Case'); }}
                         <br />
-                        <input class="radio" type="radio" id="capital" name="letter" value="capital" />
-                        <label for="capital">Capitalize 1st Letter</label>
+                        {{ Form::radio('letter', 'capital'); }}
+                        {{ Form::label('capital', 'Capitalize 1st Letter'); }}
                     </div>
                 </div>
                 <div class="col1">
-                    <button type="submit" class="button" name="XKCDsubmit">Generate</button>
+                    {{-- Form submit button. ---------------------------------}}
+                    {{ Form::submit('Generate', array('class' => 'XKCDsubmit')); }}
                 </div>
-                </form>
+                {{ Form::close(); }}
             </div>
     </div>
 @stop

@@ -1,10 +1,9 @@
-﻿$(document).ready(function () {
-    //Hide div initially.
-    $("#symNum").css("display", "none");
-
-    $("#sym").click(function () {
-
-        if ($("#sym").is(":checked")) {
+$(document).ready(function () {
+    //If symbol checkbox is clicked.
+    $("input[type='checkbox'][name='symbol']").click(function () {
+        //Check to see if symbol is selected.
+        //If yes, display div containing the symbol input field.
+        if ($("input[type='checkbox'][name='symbol']").is(":checked")) {
             //show the hidden div
             $("#symNum").show();
         }
@@ -16,7 +15,7 @@
 
     //disable letter choices if "camelCase" is selected.
     $('input[name=separation]').click(function () {
-        if ($('#camelCase').is(":checked")) {
+        if ($('input[value="camelCase"]').is(":checked")) {
             $('input[name=letter]').attr('disabled', true);
         }
         else {

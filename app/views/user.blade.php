@@ -23,24 +23,39 @@
         <div class="container">
             <h2>How many users do you want?</h2>
             <div class="col4">
-                <form action="/user" method="post">
-                    <p>Users: <input class="paragraph" type="number" min="1" max="99" value="4" name="userNum" /> (Max: 99)</p>
+                {{ Form::open(array('url' => '/user', 'method' => 'POST'));}}
+                    {{-- Users to generate field. ------------------------}}
+                    {{ Form::label('userNum', 'Users:'); }}
+                    {{ Form::number('number', '4'); }}
+                    {{ Form::label('userNum', '(Max: 99)'); }}
+                    <div class="errors">
+                        @foreach($errors->all() as $message)
+                            {{ $message }}
+                        @endforeach
+                    </div>
                     <p>
                         Include...<br />
-                        <input class="checkbox" type="checkbox" name="birthday" /><label for="birthday">Birthday</label><br />
-                        <input class="checkbox" type="checkbox" name="profile" /><label for="profile">Profile</label>
+                        {{-- Checkbox to include birthday. ----------------}}
+                        {{ Form::checkbox('birthday'); }}
+                        {{ Form::label('birthday', 'Birthday'); }}
+                        <br />
+                        {{-- Checkbox to include profile. -----------------}}
+                        {{ Form::checkbox('profile'); }}
+                        {{ Form::label('profile', 'Profile'); }}
                     </p>
-                    <button type="submit" class="button" name="RUsubmit">Generate</button>
-                </form>
+                     {{-- Form submit button. -----------------------------}}
+                    {{ Form::submit('Generate', array('class' => 'RUsubmit')); }}
+                {{ Form::close(); }}
             </div>
             <div class="col4">
-				@foreach ($userData as $users)
-					<p>
-					@foreach ($users as $items)
-						{{ $items }}<br>
-					@endforeach
-					</p>
-				@endforeach
+                {{-- For each loop to display generated users. ------------}}
+		@foreach ($userData as $users)
+                    <p>
+			@foreach ($users as $items)
+                            {{ $items }}<br>
+			@endforeach
+                    </p>
+		@endforeach
             </div>
         </div>
     </div>

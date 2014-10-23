@@ -23,12 +23,23 @@
         <div class="container">
             <h2>How many paragraphs do you want?</h2>
             <div class="col4">
-                <form action="/loremipsum" method="post">
-                    <p>Paragraphs: <input class="paragraph" type="number" min="1" max="99" value="4" name="paraNum" /> (Max: 99)</p>
-                    <button type="submit" class="button" name="LIsubmit">Generate</button>
-                </form>
+                {{ Form::open(array('url' => '/loremipsum', 'method' => 'POST')); }}
+                    {{-- Paragraphs of lorem ipsum to generate field. ----}}
+                    {{ Form::label('paragraph', 'Paragraphs:'); }}
+                    {{ Form::number('number', '4'); }}
+                    {{ Form::label('paragraph', '(Max: 99)'); }}
+                    <div class="errors">
+                        @foreach($errors->all() as $message)
+                            {{ $message }}
+                        @endforeach
+                    </div>
+                    <br><br>
+                    {{-- Form submit button. -----------------------------}}
+                    {{ Form::submit('Generate', array('class' => 'LIsubmit')); }}
+                {{ Form::close(); }}
             </div>
-			<div class="col4">
+            <div class="col4">
+                {{-- Dislay Lorem Ipsum field. ---------------------------}}
                <p>{{ $paragraphData }}</p>
             </div>
         </div>
